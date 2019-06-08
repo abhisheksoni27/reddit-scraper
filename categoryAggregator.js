@@ -19,14 +19,15 @@ mappingNames.forEach(name => {
 
 async function readAndPush(subreddit) {
   return new Promise((resolve, reject) => {
-      fs.readFile(`raw/${subreddit}.json`, (err, data) => {
-          if (err) reject(err);
+    fs.readFile(`raw/${subreddit}.json`, (err, data) => {
+      if (err) reject(err);
       resolve(data);
     });
   });
 }
 
-mappingNames.forEach(async masterCategory => {
+mappingNames.forEach(async (masterCategory, index) => {
+  console.log("TCL: masterCategory", masterCategory, index);
   let result = [];
   const mappingContent = mappings[masterCategory];
   const subMappings = Object.keys(mappingContent);
