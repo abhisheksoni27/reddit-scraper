@@ -1,0 +1,30 @@
+{
+  "politics": { "worldnews": 1000, "news": 1000 },
+  "animals": { "AnimalPorn": 2000 },
+  "love & relationships": { "socialengineering": 1000, "socialskills": 1000 },
+  "movies & tv series": { "movies": 1000, "bollywoodrealism": 1000 },
+  "fashion": { "femalefashionadvice": 1000, "makeupaddiction": 1000 },
+  "sports": { "cricket": 1000, "sports": 1000 },
+  "science and tech": {
+    "engineering": 400,
+    "learnprogramming": 400,
+    "Science": 400,
+    "medicine": 400,
+    "programming": 400
+  },
+  "travel": { "travel": 1000, "solotravel": 1000 },
+  "health & fitness": { "Fitness": 666, "mentalhealth": 666, "health": 666 },
+  "life": { "LifeProTips": 666, "lifehacks": 666, "todayilearned": 666 },
+  "money": { "finance": 666, "Entrepreneur": 666, "economy": 666 },
+  "career": { "howto": 666, "education": 666, "college": 666 },
+  "adult": { "nsfw": 2000 },
+  "entertainment": {
+    "entertainment": 285,
+    "literature": 285,
+    "InternetIsBeautiful": 285,
+    "youtube": 285,
+    "sex": 285,
+    "funny": 285,
+    "gaming": 285
+  }
+}
