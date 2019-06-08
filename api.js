@@ -1,7 +1,7 @@
 const fs = require("fs");
 const flatten = require("lodash.flatten");
 const request = require("request-promise");
-const MAX_PER_BATCH = 100;
+const MAX_PER_BATCH = 500;
 
 const sleep = async ms => {
   return new Promise((resolve, reject) => {
@@ -63,7 +63,7 @@ const readThreads = async (subreddit, totalCount = 1000) => {
       subreddit,
       curBatchCount,
       beforeTime,
-      (i + 1) * 500 * Math.random()
+      (i + 1) * 300 * Math.random()
     );
     console.log(`Done with chunk ${i} = `, batchChunks[i]);
 
@@ -77,7 +77,7 @@ const readThreads = async (subreddit, totalCount = 1000) => {
 
 const donwloadAndSaveSubreddit = async(subreddit, count) => {
   await readThreads(subreddit, count).then(data => {
-    fs.writeFile(`${subreddit}.json`, JSON.stringify(data), () => { });
+    fs.writeFile(`raw/${subreddit}.json`, JSON.stringify(data), () => { });
     return null;
   });
 };

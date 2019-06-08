@@ -19,7 +19,7 @@ mappingNames.forEach(name => {
 
 async function readAndPush(subreddit) {
   return new Promise((resolve, reject) => {
-      fs.readFile(`${subreddit}.json`, (err, data) => {
+      fs.readFile(`raw/${subreddit}.json`, (err, data) => {
           if (err) reject(err);
       resolve(data);
     });
