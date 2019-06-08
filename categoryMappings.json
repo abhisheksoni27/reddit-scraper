@@ -1,7 +1,6 @@
 {
   "politics": { "worldnews": 2000, "news": 2000 },
-  "animals": { "AnimalPorn": 4000 },
-  "love & relationships": { "socialengineering": 2000, "socialskills": 2000 },
+  "love & relationships": { "socialskills": 4000 },
   "movies & tv series": { "movies": 2000, "bollywoodrealism": 2000 },
   "fashion": { "femalefashionadvice": 2000, "makeupaddiction": 2000 },
   "sports": { "cricket": 2000, "sports": 2000 },
@@ -17,7 +16,6 @@
   "life": { "LifeProTips": 1333, "lifehacks": 1333, "todayilearned": 1333 },
   "money": { "finance": 1333, "Entrepreneur": 1333, "economy": 1333 },
   "career": { "howto": 1333, "education": 1333, "college": 1333 },
-  "adult": { "nsfw": 4000 },
   "entertainment": {
     "entertainment": 571,
     "literature": 571,

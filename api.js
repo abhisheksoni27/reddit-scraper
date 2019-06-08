@@ -21,7 +21,7 @@ const readBatchedThreads = async (
 
   return new Promise((resolve, reject) => {
     const options = {
-      uri: `https://api.pushshift.io/reddit/search/submission/?fields=id,url,selftext,title,created_utc&subreddit=${subreddit}&score=>00&size=${count}&before=${beforeTime}`,
+      uri: `https://api.pushshift.io/reddit/search/submission/?fields=id,url,selftext,title,created_utc&subreddit=${subreddit}&score=>20&size=${count}&before=${beforeTime}`,
       headers: {
         "User-Agent": Math.random().toString()
       },
@@ -63,9 +63,13 @@ const readThreads = async (subreddit, totalCount = 1000) => {
       subreddit,
       curBatchCount,
       beforeTime,
-      (i + 1) * 300 * Math.random()
+      (i + 1) * 50 * Math.random()
     );
     console.log(`Done with chunk ${i} = `, batchChunks[i]);
+
+    if (!posts[posts.length - 1]) {
+      break;
+    }
 
     beforeTime = posts[posts.length - 1].created_utc;
     submissions.push(posts);
